@@ -14,7 +14,7 @@ Environmental variables are a good way to keep our tokens secret and our options
 cp .env.example to .env
 ```
 
-Add your token for Gemfury to `.env`
+Add your token for Gemfury to `.env` as `GEMFUTY_PUBLISH_TOKEN`
 
 ```shell
 poetry config repositories.gemfury https://push.fury.io/apoclyps
@@ -74,3 +74,29 @@ poetry publish -r gemfury -vvv
 3. Run `poetry run pre-commit run --all-files` if there are files that were committed before adding the git hooks.
 4. Activate the shell with `poetry shell`
 5. Test with: `poetry run pytest
+
+## Installing package
+
+Add your token to the session:
+
+```shell
+export GEMFURY_DEPLOY_TOKEN=YOUR-TOKEN
+```
+
+```shell
+pip install python-package-publish --extra-index-url https://${GEMFURY_DEPLOY_TOKEN}:@pypi.fury.io/apoclyps/
+```
+
+## Using the Package
+
+```shell
+>>> from python_package_publish import chunk
+
+>>> data = [1, 2, 3, 4, 5, 6, 7, 8]
+
+>>> list(chunk(data, 4))
+[[1, 2, 3, 4], [5, 6, 7, 8]]
+
+>>> list(chunk(data, 2))
+[[1, 2], [3, 4], [5, 6], [7, 8]]
+```
