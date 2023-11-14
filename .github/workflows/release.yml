@@ -6,38 +6,21 @@ on:
     branches: [main]
 
 jobs:
-  Quality:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4.1.1
-      - uses: actions/setup-python@v4.7.1
-        with:
-          python-version: 3.11
-
-      - name: Install Python Poetry
-        uses: abatilo/actions-poetry@v2.3.0
-        with:
-          poetry-version: 1.6.1
-
-      - name: Configure poetry
-        shell: bash
-        run: python -m poetry config virtualenvs.in-project true
-
-      - name: View poetry version
-        run: poetry --version
-
-      - name: Install dependencies
-        run: |
-          python -m poetry install
-
-  Release:
-    needs: Quality
+  release:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'chore(release):')
+    name: create release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-python@v4.7.1
-        with:
-          python-version: 3.11
-
       - name: Checkout code
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: "body.md"
+          draft: false
+          prerelease: false
