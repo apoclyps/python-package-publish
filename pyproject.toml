@@ -22,25 +22,18 @@ python = "^3.11"
 poetry = "^1.6.1"
 
 [tool.poetry.group.dev.dependencies]
-black = "23.9.1"
 codespell = "2.2.5"
-freezegun = "1.2.2"
-ipdb = "0.13.13"
 mypy = "1.5.1"
 pre-commit = "2.20.0"
 pytest = "7.4.2"
 pytest-cov = "4.1.0"
-pytest-mock = "3.12.0"
-refurb = "1.21.0"
 ruff = "0.0.291"
-vcrpy = "5.1.0"
+tox = "4.11.3"
+
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.black]
-line_length = 120
 
 [tool.mypy]
 ignore_missing_imports = true
@@ -59,9 +52,6 @@ enable-colors = ""
 ignore-words-list = "som,iam,jupyter,ot,fo,te,toos,ue,thead,mke,ths"
 quiet-level = 2
 skip = "poetry.lock,.mypy_cache,.git,.ruff_cache,.coverage,menu.json,.venv,.idea,.htmlcov"
-
-[tool.refurb]
-ignore = [107, 115, 124, 149]
 
 [tool.ruff]
 cache-dir = ".cache/ruff"
