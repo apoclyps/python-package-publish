@@ -1,0 +1,43 @@
+name: release
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  Quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.1
+      - uses: actions/setup-python@v4.7.1
+        with:
+          python-version: 3.11
+
+      - name: Install Python Poetry
+        uses: abatilo/actions-poetry@v2.3.0
+        with:
+          poetry-version: 1.6.1
+
+      - name: Configure poetry
+        shell: bash
+        run: python -m poetry config virtualenvs.in-project true
+
+      - name: View poetry version
+        run: poetry --version
+
+      - name: Install dependencies
+        run: |
+          python -m poetry install
+
+  Release:
+    needs: Quality
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master' && !contains(github.event.head_commit.message, 'chore(release):')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v4.7.1
+        with:
+          python-version: 3.11
+
+      - name: Checkout code
+        uses: actions/checkout@v4.1.1

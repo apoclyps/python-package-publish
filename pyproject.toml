@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-package-publish"
-version = "0.1.1"
+version = "0.1.2"
 description = "A common shared library to demonstrate python package publishing"
 authors = ["Kyle Harrison <kyle.harrison.dev@gmail.com>"]
 packages = [{ include = "python_package_publish" }]
@@ -30,7 +30,6 @@ pytest-cov = "4.1.0"
 ruff = "0.0.291"
 tox = "4.11.3"
 
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -56,6 +55,9 @@ skip = "poetry.lock,.mypy_cache,.git,.ruff_cache,.coverage,menu.json,.venv,.idea
 [tool.ruff]
 cache-dir = ".cache/ruff"
 fix = true
+
+[tool.commitizen]
+version = "0.1.2"  # This should be your current semver version
 
 # ruff linting rules are listed within: https://beta.ruff.rs/docs/rules
 select = [
