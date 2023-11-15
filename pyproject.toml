@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-package-publish"
-version = "0.1.0"
+version = "0.2.0"
 description = "A common shared library to demonstrate python package publishing"
 authors = ["Kyle Harrison <kyle.harrison.dev@gmail.com>"]
 packages = [{ include = "python_package_publish" }]
@@ -23,6 +23,7 @@ poetry = "^1.6.1"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.2.6"
+freezegun = "1.2.2"
 mypy = "1.5.1"
 pre-commit = "3.5.0"
 pytest = "7.4.2"
@@ -57,7 +58,7 @@ cache-dir = ".cache/ruff"
 fix = true
 
 [tool.commitizen]
-version = "0.1.0"
+version = "0.2.0"
 version_files = [
     "python_package_publish/version.py",
     "pyproject.toml:^version"
