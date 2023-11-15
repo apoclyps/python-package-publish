@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/apoclyps/python-package-publish/compare/0.2.0...0.3.0) (2023-11-15)
+
+
+### 🚀 Features
+
+* implements HTTP client ([#13](https://github.com/apoclyps/python-package-publish/issues/13)) ([dbf5a3b](https://github.com/apoclyps/python-package-publish/commit/dbf5a3b7bcf7c659acd11b0c2e9a192b036789ce))
+
 ## [0.2.0](https://github.com/apoclyps/python-package-publish/compare/0.1.0...0.2.0) (2023-11-15)
 
 
