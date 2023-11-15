@@ -4,13 +4,13 @@ from uuid import UUID
 import pytest
 from freezegun import freeze_time
 
-from python_package_publish.utils import get_utc_now
+from python_package_publish.utils import get_utc_now, get_uuid
 
 
 def test_get_uuid_is_valid_uuid() -> None:
     """Test that get_uuid() returns a valid uuid."""
     try:
-        UUID("")
+        UUID(get_uuid())
     except ValueError:
         pytest.fail("get_uuid() did not return a valid uuid.")
 

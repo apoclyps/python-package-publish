@@ -69,9 +69,9 @@ repos:
         entry: mypy
         language: python
         types: [python]
-        args: ["--ignore-missing-imports", "--scripts-are-modules"]
+        args: ["--ignore-missing-imports", "--scripts-are-modules", "--install-types"]
         require_serial: true
-        additional_dependencies: [types-click==7.1.2, types-freezegun==0.1.4]
+        additional_dependencies: [types-click==7.1.2, types-freezegun==0.1.4, types-requests==2.31.0.10]
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
     rev: v0.0.292

@@ -18,18 +18,21 @@ classifiers = [
 include = ["LICENSE.md"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+freezegun = "1.2.2"
 poetry = "^1.6.1"
+python = "^3.11"
+requests = "2.31.0"
 
 [tool.poetry.group.dev.dependencies]
 codespell = "2.2.6"
-freezegun = "1.2.2"
 mypy = "1.5.1"
 pre-commit = "3.5.0"
 pytest = "7.4.2"
 pytest-cov = "4.1.0"
+responses = "0.24.1"
 ruff = "0.0.291"
 tox = "4.11.3"
+types-requests = "2.31.0.10"
 
 [build-system]
 requires = ["poetry-core"]
@@ -55,6 +58,7 @@ skip = "poetry.lock,.mypy_cache,.git,.ruff_cache,.coverage,menu.json,.venv,.idea
 
 [tool.ruff]
 cache-dir = ".cache/ruff"
+line-length = 120
 fix = true
 
 [tool.commitizen]
