@@ -22,7 +22,7 @@ python = "^3.11"
 poetry = "^1.6.1"
 
 [tool.poetry.group.dev.dependencies]
-codespell = "2.2.5"
+codespell = "2.2.6"
 mypy = "1.5.1"
 pre-commit = "2.20.0"
 pytest = "7.4.2"
