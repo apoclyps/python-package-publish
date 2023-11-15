@@ -57,7 +57,11 @@ cache-dir = ".cache/ruff"
 fix = true
 
 [tool.commitizen]
-version = "0.1.2"  # This should be your current semver version
+version = "0.1.0"
+version_files = [
+    "python_package_publish/version.py",
+    "pyproject.toml:^version"
+]
 
 # ruff linting rules are listed within: https://beta.ruff.rs/docs/rules
 select = [
