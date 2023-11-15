@@ -15,6 +15,3 @@ def get_utc_now() -> _datetime.datetime:
     a SQLAlchemy model. Also used to freeze datetime via freezegun during testing.
     """
     return _datetime.datetime.now(_datetime.UTC)
-
-
-__all__ = ["get_uuid", "get_utc_now"]
