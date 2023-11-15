@@ -42,7 +42,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        environment: [testpypi, pypi]
+        environment: [gemfury]
     environment: ${{ matrix.environment }}
     steps:
       - name: Checkout repository
@@ -61,11 +61,8 @@ jobs:
       - name: Build
         run: poetry build
 
-      - name: publish pypi
-        if: ${{ matrix.environment=='pypi' }}
-        env:
-          POETRY_HTTP_BASIC_PYPI_USERNAME: __token__
-          POETRY_HTTP_BASIC_PYPI_PASSWORD: ${{secrets.PYPI_API_TOKEN}}
+      - name: publish gemfury
+        if: ${{ matrix.environment=='gemfury' }}
         run: |
           poetry config repositories.gemfury ${{ secrets.GEMFURY_REPOSITORY_URL }}
           poetry config http-basic.gemfury ${{ secrets.GEMFURY_PUBLISH_TOKEN }} NOPASS
