@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/apoclyps/python-package-publish/compare/0.1.0...0.2.0) (2023-11-15)
+
+
+### 🚀 Features
+
+* adds automatic labels to pull requests ([#7](https://github.com/apoclyps/python-package-publish/issues/7)) ([775ad3d](https://github.com/apoclyps/python-package-publish/commit/775ad3d91f0ccd4f1a0fa711c5d51a913b2da3ae))
+
 ## 0.1.0 (2023-11-15)
 
 
