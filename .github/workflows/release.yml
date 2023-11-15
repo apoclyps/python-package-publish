@@ -17,7 +17,7 @@ jobs:
         with:
           # https://github.com/google-github-actions/release-please-action#configuration
           release-type: python
-          package-name: poetry-plugin-upgrade
+          package-name: python-package-publish
           changelog-types: >
             [
               {"type": "build", "section": "🏗️ Build System", "hidden": true},

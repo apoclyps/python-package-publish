@@ -32,7 +32,7 @@ pytest tests
 Install current project from branch
 
 ```shell
-poetry add git+https://github.com/MousaZeidBaker/poetry-plugin-up.git#branch-name
+poetry add git+https://github.com/apoclyps/python-package-publish.git#branch-name
 ```
 
 ## Commit message
