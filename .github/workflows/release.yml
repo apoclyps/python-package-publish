@@ -14,10 +14,9 @@ jobs:
       - name: release
         id: release
         uses: google-github-actions/release-please-action@v3.7.13
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_ACTION_TOKEN }}
         with:
           # https://github.com/google-github-actions/release-please-action#configuration
+          token: ${{ secrets.RELEASE_ACTION_TOKEN }}
           release-type: python
           package-name: python-package-publish
           changelog-types: >
