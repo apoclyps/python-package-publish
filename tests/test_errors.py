@@ -20,7 +20,7 @@ def test_service_http_error_for_522_with_no_body() -> None:
     service_http_error: ServiceHTTPError = error.value  # type: ignore[annotation-unchecked]
 
     assert isinstance(service_http_error, ServiceHTTPError)
-    assert service_http_error.response
+    assert service_http_error.response is not None
     assert service_http_error.response.status_code == 522
     assert service_http_error.error_id is None
 
@@ -40,6 +40,6 @@ def test_service_http_error_for_522_with_empty() -> None:
     service_http_error: ServiceHTTPError = error.value  # type: ignore[annotation-unchecked]
 
     assert isinstance(service_http_error, ServiceHTTPError)
-    assert service_http_error.response
+    assert service_http_error.response is not None
     assert service_http_error.response.status_code == 522
     assert service_http_error.error_id is None
