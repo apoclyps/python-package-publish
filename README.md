@@ -1,17 +1,19 @@
 # python-package-publish
 
-How to push a Poetry package to a private Gemfury PyPI server
+This example repository will outline how to push a Poetry package to a private Gemfury PyPI server using Github Actions, Commitizen, and Release Please to help automate as the release process
 
-## Automatic release process
+## Gemfury Publishing Workflow
 
-The process to publish to Gemfury has been automated by this Github action workflow in this Repository.
+The Gemfury publishing process has been automated through the implementation of a GitHub Action workflow in this repository.
 
-Following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) a release will be created for all features and fixes after a pull request following these conventions are merged.
+Adhering to the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) pattern in commit messages and pull request titles will automatically trigger the creation of a release upon merging the pull request.
 
-| Increment | Description                 | Conventional commit map |
+Semantic versioning is applied to new releases according to the following criteria:
+
+| Increment | Description                 | Conventional Commit Map |
 | --------- | --------------------------- | ----------------------- |
 | MAJOR     | Breaking changes introduced | BREAKING CHANGE         |
 | MINOR     | New features                | feat                    |
-| PATCH     | Fixes                       | fix + everything else   |
+| PATCH     | Fixes                       | fix + all other types   |
 
-As soon as a new version is detected a pull request is opened for that release. Each subsequent merged change will be appended to that release until it has been merged which will trigger a new release candidate to be created on GitHub and then pushed to Gemfury.
+Upon merging a change, a pull request is initiated for that particular release. Each subsequent merged change appends to this release until completion. This process triggers the creation of a new release candidate on GitHub, subsequently pushing the changes to Gemfury.
