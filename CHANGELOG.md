@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/apoclyps/python-package-publish/compare/0.3.1...0.3.2) (2023-11-16)
+
+
+### 📝 Documentation
+
+* adds clarifications to the release process in the README ([#20](https://github.com/apoclyps/python-package-publish/issues/20)) ([cd7c38b](https://github.com/apoclyps/python-package-publish/commit/cd7c38b784efb35c58ef432eff0179d3775ed356))
+* adds documentation for release process ([#16](https://github.com/apoclyps/python-package-publish/issues/16)) ([aade7e5](https://github.com/apoclyps/python-package-publish/commit/aade7e59bddb203aed0db4c4ca9cf977ace70c8e))
+* how to configure projects to use dependency ([adc5545](https://github.com/apoclyps/python-package-publish/commit/adc5545282ba9f16f6a68b4b5e2e936a34b0cb24))
+
 ## [0.3.1](https://github.com/apoclyps/python-package-publish/compare/0.3.0...0.3.1) (2023-11-15)
 
 
