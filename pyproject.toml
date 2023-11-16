@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python-package-publish"
-version = "0.3.1"
+version = "0.3.2"
 description = "A common shared library to demonstrate python package publishing"
 authors = ["Kyle Harrison <kyle.harrison.dev@gmail.com>"]
 packages = [{ include = "python_package_publish" }]
