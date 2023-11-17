@@ -19,7 +19,7 @@ include = ["LICENSE.md"]
 
 [tool.poetry.dependencies]
 freezegun = "1.2.2"
-poetry = "^1.6.1"
+poetry = "^1.7.1"
 python = "^3.11"
 requests = "2.31.0"
 
